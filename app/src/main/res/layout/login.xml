@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+	<Button android:layout_width="wrap_content" android:layout_height="35dp"
+			android:layout_margin="10dp"
+			android:id="@+id/back"
+			android:textSize="10dp"
+			android:text="返回"
+	/>
+
+	<Button android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:text="选择文件"
+			android:id="@+id/select_file"
+			android:layout_margin="30dp"
+	/>
+
+	<ImageView android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:id="@+id/imageView"
+	/>
+
+	<TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:text="这里显示url"
+			android:id="@+id/urlText"
+			android:layout_gravity="center"
+			  android:textAlignment="center"
+			  android:textSize="20dp"
+	/>
+
+	<Button android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:text="点击跳转"
+			android:id="@+id/jump"
+	/>
+</LinearLayout>
