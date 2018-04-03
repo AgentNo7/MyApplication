@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         url.append("&email=");
                         url.append(mail);
                     }
-                    CallUrl callUrl = new CallUrl(url.toStrigir
+                    CallUrl callUrl = new CallUrl(url.toString());
                     callUrl.start();
                     try {
                         callUrl.join();
