@@ -1,9 +1,6 @@
 package com.example.aqiod.myapplication;
 
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

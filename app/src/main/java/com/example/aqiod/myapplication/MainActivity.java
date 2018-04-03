@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Button selectFile;
 
-
     private static final int REQUESTCODE_FROM_ACTIVITY = 1000;
 
     private EditText username;
@@ -78,9 +77,11 @@ public class MainActivity extends AppCompatActivity {
                     url.append(user);
                     url.append("&password=");
                     url.append(pass);
-                    url.append("&email=");
-                    url.append(mail);
-                    CallUrl callUrl = new CallUrl(url.toString());
+                    if (mail != null && !mail.equals("") && !mail.equals(" ")) {
+                        url.append("&email=");
+                        url.append(mail);
+                    }
+                    CallUrl callUrl = new CallUrl(url.toStrigir
                     callUrl.start();
                     try {
                         callUrl.join();
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "注册成功！", Toast.LENGTH_LONG).show();
                         setContentView(R.layout.activity_main);
                     } else {
-                        Toast.makeText(MainActivity.this, "注册失败（用户名重复或其他错误）！", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, json, Toast.LENGTH_LONG).show();
                     }
                 } else {
                     Toast.makeText(MainActivity.this, "验证码错误！", Toast.LENGTH_LONG).show();
@@ -126,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText userField;
     private EditText passField;
+    
 
     private class CallUrl extends Thread {
         private String result = null;
